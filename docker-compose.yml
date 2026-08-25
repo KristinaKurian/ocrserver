@@ -1,0 +1,14 @@
+services:
+  web:
+    build:
+      context: .
+    ports:
+      - "8080:8080"
+    environment:
+      PORT: 8080
+      OCR_WORKERS: 4
+      OCR_QUEUE_SIZE: 8
+      OCR_MAX_IMAGE_MB: 20
+      OCR_MAX_IMAGE_WIDTH: 10000
+      OCR_MAX_IMAGE_HEIGHT: 10000
+      OCR_MAX_IMAGE_PIXELS: 40000000
